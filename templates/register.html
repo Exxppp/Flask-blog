@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="vh-100">
+        <div class="d-flex align-items-center h-100">
+            <div class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                        <div class="card" style="border-radius: 15px;">
+                            <div class="card-body p-5">
+                                <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+                                <form action="#" method="post">
+
+                                    <div class="mb-4">
+                                        <label for="FirstName">First Name</label>
+                                        <input type="text" class="form-control form-control-lg" name="FirstName"
+                                               placeholder="Your First Name" id="FirstName" maxlength="32">
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="LastName">Last Name</label>
+                                        <input type="text" class="form-control form-control-lg" name="LastName"
+                                               placeholder="Your Last Name" id="LastName" maxlength="32">
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="Username">Username</label>
+                                        <input type="text" class="form-control form-control-lg" name="Username"
+                                               placeholder="Username" id="Username" maxlength="64">
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="Email">Email</label>
+                                        <input type="text" class="form-control form-control-lg" name="Email"
+                                               placeholder="Your Email" id="Email" maxlength="120">
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="Password">Password</label>
+                                        <input type="text" class="form-control form-control-lg" name="Password"
+                                               placeholder="Password" id="Password" maxlength="128">
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="RepeatPassword">Repeat password</label>
+                                        <input type="text" class="form-control form-control-lg" name="RepeatPassword"
+                                               placeholder="Repeat your password" id="RepeatPassword" maxlength="128">
+                                    </div>
+
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <input class="btn btn-primary btn-block btn-lg" type="submit" value="Register">
+                                    </div>
+
+                                    <p class="text-center text-muted mt-5 mb-0">Have already an account?
+                                        <a href="#" class="fw-bold text-body">
+                                            <u>Login here</u>
+                                        </a>
+                                    </p>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
