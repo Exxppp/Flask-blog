@@ -23,4 +23,3 @@ class UserLoginForm(FlaskForm):
 class WriteBlogForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
     body = TextAreaField('Body', validators=[DataRequired()])
-

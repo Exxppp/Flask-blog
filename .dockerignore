@@ -1,0 +1,8 @@
+.idea
+.git
+migrations
+blog.log
+README.md
+__pycache__
+docker-compose.yml
+Dockerfile

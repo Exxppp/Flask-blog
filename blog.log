@@ -270,3 +270,132 @@ jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'load'.
 [2023-02-20 01:23:18,539] [INFO ]- blog: Blog started
 [2023-02-20 01:24:31,273] [INFO ]- blog: Blog started
 [2023-02-20 01:24:52,557] [INFO ]- blog: Blog started
+[2023-02-20 03:08:53,186] [INFO ]- blog: Blog started
+[2023-02-20 03:09:28,130] [INFO ]- blog: Blog started
+[2023-02-20 03:09:28,827] [INFO ]- blog: Blog started
+[2023-02-20 03:16:59,975] [INFO ]- blog: Blog started
+[2023-02-20 03:17:00,776] [INFO ]- blog: Blog started
+[2023-02-21 18:57:34,935] [INFO ]- blog: Blog started
+[2023-02-21 18:58:23,549] [INFO ]- blog: Blog started
+[2023-02-21 18:58:29,555] [INFO ]- blog: Blog started
+[2023-02-21 19:00:34,668] [INFO ]- blog: Blog started
+[2023-02-21 19:03:17,200] [ERROR ]- blog: Exception on / [GET]
+Traceback (most recent call last):
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\engine\default.py", line 747, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedTable: relation "blog" does not exist
+LINE 2: FROM blog JOIN "user" ON "user".id = blog."user" ORDER BY bl...
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "Z:\python project\flask-blog-git\views.py", line 19, in index
+    .join(User).order_by(Blog.timestamp.desc()).all()
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2697, in all
+    return self._iter().all()  # type: ignore
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2855, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2229, in execute
+    return self._execute_internal(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2124, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\orm\context.py", line 253, in orm_execute_statement
+    result = conn.execute(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1414, in execute
+    return meth(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 485, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2325, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\engine\default.py", line 747, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) relation "blog" does not exist
+LINE 2: FROM blog JOIN "user" ON "user".id = blog."user" ORDER BY bl...
+             ^
+
+[SQL: SELECT blog.title AS blog_title, blog.body AS blog_body, blog.timestamp AS blog_timestamp, "user".first_name AS user_first_name, "user".last_name AS user_last_name, blog.id AS blog_id 
+FROM blog JOIN "user" ON "user".id = blog."user" ORDER BY blog.timestamp DESC]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2023-02-21 19:03:23,122] [ERROR ]- blog: Exception on / [GET]
+Traceback (most recent call last):
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\engine\default.py", line 747, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedTable: relation "blog" does not exist
+LINE 2: FROM blog JOIN "user" ON "user".id = blog."user" ORDER BY bl...
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "Z:\python project\flask-blog-git\views.py", line 19, in index
+    .join(User).order_by(Blog.timestamp.desc()).all()
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2697, in all
+    return self._iter().all()  # type: ignore
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2855, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2229, in execute
+    return self._execute_internal(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2124, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\orm\context.py", line 253, in orm_execute_statement
+    result = conn.execute(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1414, in execute
+    return meth(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 485, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2325, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "Z:\python project\flask-blog-git\venv\lib\site-packages\sqlalchemy\engine\default.py", line 747, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) relation "blog" does not exist
+LINE 2: FROM blog JOIN "user" ON "user".id = blog."user" ORDER BY bl...
+             ^
+
+[SQL: SELECT blog.title AS blog_title, blog.body AS blog_body, blog.timestamp AS blog_timestamp, "user".first_name AS user_first_name, "user".last_name AS user_last_name, blog.id AS blog_id 
+FROM blog JOIN "user" ON "user".id = blog."user" ORDER BY blog.timestamp DESC]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2023-02-21 19:04:05,212] [INFO ]- blog: Blog started
+[2023-02-21 19:04:05,931] [INFO ]- blog: Blog started
+[2023-02-21 19:06:07,361] [INFO ]- blog: Blog started
+[2023-02-21 19:06:12,128] [INFO ]- blog: Blog started
+[2023-02-21 19:06:36,663] [INFO ]- blog: Blog started
+[2023-02-21 19:06:43,951] [INFO ]- blog: Blog started

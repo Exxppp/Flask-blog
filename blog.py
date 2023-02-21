@@ -22,5 +22,5 @@ login_manager.init_app(app)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
-import views
-import models
+import views  # type: ignore
+import models  # type: ignore

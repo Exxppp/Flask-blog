@@ -4,7 +4,8 @@ DB_USER = 'root'
 DB_PASSWORD = 'root'
 DB_PORT = 5432
 DB_NAME = 'blog'
-DB_URI = f'postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@localhost:{DB_PORT}/{DB_NAME}'
+DB_HOST = "blog_db"
+DB_URI = f'postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}'
 
 LOGGING = {
     'version': 1,
